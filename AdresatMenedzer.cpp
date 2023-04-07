@@ -23,7 +23,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     adresat.ustawIdUzytkownika(ID_Zalogowanego_Uzytkownika);
 
     //cout << "ID adresata  " << adresat.pobierzId() << endl;
-    c//out << "ID uzytkownika  " << adresat.pobierzIdUzytkownika() << endl;
+    //cout << "ID uzytkownika  " << adresat.pobierzIdUzytkownika() << endl;
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(MetodyPomocnicze::wczytajLinie()));
