@@ -86,11 +86,12 @@ int UzytkownikMenedzer::logowanieUzytkownika()
     system("pause");
     return 0;
 }
-void UzytkownikMenedzer::wyloguj(){
+int UzytkownikMenedzer::wyloguj(){
 
     idZalogowanegoUzytkownika = 0;
     cout << "Zostales wylogowany" << endl;
     system("pause");
+    return idZalogowanegoUzytkownika;
 }
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 {
