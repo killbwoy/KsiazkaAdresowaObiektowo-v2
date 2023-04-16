@@ -13,21 +13,19 @@ class KsiazkaAdresowa{
 
     UzytkownikMenedzer uzytkownikMenedzer;
 
-    AdresatMenedzer *adresatMenedzer;
-
-    const string NAZWA_PLIKU_Z_ADRESATAMI;
+    AdresatMenedzer adresatMenedzer;
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami){
-     adresatMenedzer = NULL;
-    }
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami){
+        uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+        };
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
     void wyloguj();
     void zmianaHaslaZalogowanegoUzytkownika();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
-
+     int pobierzIdZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
 
 };

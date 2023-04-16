@@ -20,7 +20,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     Adresat adresat;
 
     adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata() + 1));
-    adresat.ustawIdUzytkownika(ID_Zalogowanego_Uzytkownika);
+    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
 
     //cout << "ID adresata  " << adresat.pobierzId() << endl;
     //cout << "ID uzytkownika  " << adresat.pobierzIdUzytkownika() << endl;
@@ -70,4 +70,11 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Email:              " << adresat.pobierzEmail() << endl;
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
-
+void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
+{
+    idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
+}
+int AdresatMenedzer::pobierzIdOstatniegoAdresata()
+{
+    return plikZAdresatami.pobierzIdOstatniegoAdresata();
+}
