@@ -1,35 +1,45 @@
 #include "KsiazkaAdresowa.h"
 
-void KsiazkaAdresowa::rejestracjaUzytkownika(){
+void KsiazkaAdresowa::rejestracjaUzytkownika() {
 
     uzytkownikMenedzer.rejestracjaUzytkownika();
 }
-void KsiazkaAdresowa::logowanieUzytkownika(){
+
+void KsiazkaAdresowa::logowanieUzytkownika() {
 
     uzytkownikMenedzer.logowanieUzytkownika();
-    adresatMenedzer.ustawIdZalogowanegoUzytkownika(pobierzIdZalogowanegoUzytkownika());
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+
+        adresatMenedzer.ustawIdZalogowanegoUzytkownika(uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+    }
 }
-void KsiazkaAdresowa::wypiszWszystkichUzytkownikow(){
+
+void KsiazkaAdresowa::wypiszWszystkichUzytkownikow() {
 
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
-void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
 
-    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika() {
+
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+        uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+    }
 }
-void KsiazkaAdresowa::wyloguj(){
+
+void KsiazkaAdresowa::wyloguj() {
 
     uzytkownikMenedzer.wyloguj();
 }
-void KsiazkaAdresowa::dodajAdresata(){
 
-    adresatMenedzer.dodajAdresata();
+void KsiazkaAdresowa::dodajAdresata() {
+
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+
+        adresatMenedzer.dodajAdresata();
+    }
 }
-void KsiazkaAdresowa::wyswietlWszystkichAdresatow(){
+
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
 
     adresatMenedzer.wyswietlWszystkichAdresatow();
-}
-int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
-{
-    return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
 }

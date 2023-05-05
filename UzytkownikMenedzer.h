@@ -14,13 +14,16 @@
 
 using namespace std;
 
-class UzytkownikMenedzer{
+class UzytkownikMenedzer {
 
     int idZalogowanegoUzytkownika;
-    vector <Uzytkownik> uzytkownicy;
-    Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
+
+    vector <Uzytkownik> uzytkownicy;
+
+    Uzytkownik podajDaneNowegoUzytkownika();
+
     PlikZUzytkownikami plikZUzytkownikami;
 
 public:
@@ -28,11 +31,15 @@ public:
         idZalogowanegoUzytkownika = 0;
         uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
     };
+
+    bool czyUzytkownikJestZalogowany();
+
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
-    int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
+
+    int logowanieUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
     int wyloguj();
 };
