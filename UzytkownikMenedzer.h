@@ -41,6 +41,6 @@ public:
 
     int logowanieUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
-    int wyloguj();
+    void wyloguj();
 };
 #endif

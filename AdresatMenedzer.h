@@ -21,9 +21,9 @@ class AdresatMenedzer {
     vector <Adresat> adresaci;
 
 public:
-    AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) : plikZAdresatami(nazwaPlikuZAdresatami), ID_Zalogowanego_Uzytkownika(idZalogowanegoUzytkownika) {
+    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){
 
-        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_Zalogowanego_Uzytkownika);
+       ID_Zalogowanego_Uzytkownika = 0;
     };
 
     Adresat podajDaneNowegoAdresata();

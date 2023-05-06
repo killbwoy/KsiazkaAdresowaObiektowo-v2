@@ -81,12 +81,11 @@ int UzytkownikMenedzer::logowanieUzytkownika() {
     system("pause");
     return 0;
 }
-int UzytkownikMenedzer::wyloguj() {
+void UzytkownikMenedzer::wyloguj() {
 
     idZalogowanegoUzytkownika = 0;
     cout << "Zostales wylogowany" << endl;
     system("pause");
-    return idZalogowanegoUzytkownika;
 }
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
     Uzytkownik uzytkownik;
