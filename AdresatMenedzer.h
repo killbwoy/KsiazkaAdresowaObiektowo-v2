@@ -16,14 +16,14 @@ class AdresatMenedzer {
 
     PlikZAdresatami plikZAdresatami;
 
-    int ID_Zalogowanego_Uzytkownika;
+    int IdZalogowanegoUzytkownika;
 
     vector <Adresat> adresaci;
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){
 
-       ID_Zalogowanego_Uzytkownika = 0;
+       IdZalogowanegoUzytkownika = 0;
     };
 
     Adresat podajDaneNowegoAdresata();

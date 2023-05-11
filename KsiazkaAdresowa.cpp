@@ -7,10 +7,10 @@ void KsiazkaAdresowa::rejestracjaUzytkownika() {
 
 void KsiazkaAdresowa::logowanieUzytkownika() {
 
-    int idZalogowanegoUzytkownika = uzytkownikMenedzer.logowanieUzytkownika();
+    int IdZalogowanegoUzytkownika = uzytkownikMenedzer.logowanieUzytkownika();
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
 
-        adresatMenedzer.ustawIdZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
+        adresatMenedzer.ustawIdZalogowanegoUzytkownika(IdZalogowanegoUzytkownika);
         adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     }
 }
@@ -40,6 +40,7 @@ void KsiazkaAdresowa::dodajAdresata() {
 
         adresatMenedzer.dodajAdresata();
     }
+    else cout << "Zaden uzytkownik nie jest zalogowany" << endl;
 }
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {

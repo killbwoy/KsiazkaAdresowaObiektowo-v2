@@ -16,7 +16,7 @@ using namespace std;
 
 class UzytkownikMenedzer {
 
-    int idZalogowanegoUzytkownika;
+    int IdZalogowanegoUzytkownika;
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
 
@@ -28,7 +28,7 @@ class UzytkownikMenedzer {
 
 public:
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {
-        idZalogowanegoUzytkownika = 0;
+        IdZalogowanegoUzytkownika = 0;
         uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
     };
 
