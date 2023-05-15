@@ -12,15 +12,32 @@ using namespace std;
 class KsiazkaAdresowa{
 
     UzytkownikMenedzer uzytkownikMenedzer;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     AdresatMenedzer *adresatMenedzer;
 
     const string NAZWA_PLIKU_Z_ADRESATAMI;
 
 public:
+<<<<<<< Updated upstream
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami){
      adresatMenedzer = NULL;
     }
+=======
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {
+        adresatMenedzer = NULL;
+    };
+
+    ~KsiazkaAdresowa() {
+        delete adresatMenedzer;
+        adresatMenedzer = NULL;
+    };
+
+    int pobierzIdZalogowanegoUzytkownika();
+
+>>>>>>> Stashed changes
     void rejestracjaUzytkownika();
     void logowanieUzytkownika();
     void wyloguj();
@@ -29,6 +46,7 @@ public:
     void wyswietlWszystkichAdresatow();
 
     void wypiszWszystkichUzytkownikow();
+    //void ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika);
 
 };
 

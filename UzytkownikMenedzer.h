@@ -30,7 +30,12 @@ public:
     };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+<<<<<<< Updated upstream
     void wczytajUzytkownikowZPliku();
+=======
+    void zmianaHaslaZalogowanegoUzytkownika();
+
+>>>>>>> Stashed changes
     int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wyloguj();

@@ -1,7 +1,12 @@
 #include "AdresatMenedzer.h"
 
+<<<<<<< Updated upstream
 void AdresatMenedzer::dodajAdresata()
 {
+=======
+void AdresatMenedzer::dodajAdresata() {
+
+>>>>>>> Stashed changes
     Adresat adresat;
 
     system("cls");
@@ -15,6 +20,7 @@ void AdresatMenedzer::dodajAdresata()
         cout << "Blad. Nie udalo sie dodac nowego adresata do pliku" << endl;
     system("pause");
 }
+<<<<<<< Updated upstream
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
@@ -24,6 +30,14 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 
     //cout << "ID adresata  " << adresat.pobierzId() << endl;
     //cout << "ID uzytkownika  " << adresat.pobierzIdUzytkownika() << endl;
+=======
+Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
+
+    Adresat adresat;
+
+    adresat.ustawId((plikZAdresatami.pobierzIdOstatniegoAdresata() + 1));
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+>>>>>>> Stashed changes
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(MetodyPomocnicze::wczytajLinie()));
@@ -71,3 +85,15 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
+<<<<<<< Updated upstream
+=======
+int AdresatMenedzer::pobierzIdOstatniegoAdresata() {
+    return plikZAdresatami.pobierzIdOstatniegoAdresata();
+}
+void AdresatMenedzer::wyloguj() {
+    adresaci.clear();
+}
+void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku() {
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+}
+>>>>>>> Stashed changes

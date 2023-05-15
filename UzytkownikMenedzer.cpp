@@ -73,7 +73,7 @@ int UzytkownikMenedzer::logowanieUzytkownika()
                     cout << endl << "Zalogowales sie." << endl << endl;
                     idZalogowanegoUzytkownika = itr->pobierzId();
                     system("pause");
-                    return itr -> pobierzId();
+                    return IdZalogowanegoUzytkownika;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
@@ -111,3 +111,16 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
+<<<<<<< Updated upstream
+=======
+
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika() {
+    return IdZalogowanegoUzytkownika;
+}
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany() {
+    if (IdZalogowanegoUzytkownika > 0)
+        return true;
+    else
+        return false;
+}
+>>>>>>> Stashed changes
