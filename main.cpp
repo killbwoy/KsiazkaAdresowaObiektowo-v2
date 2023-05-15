@@ -61,6 +61,8 @@ int main() {
             cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
             cout << "---------------------------" << endl;
             cout << "1. Dodaj adresata" << endl;
+            cout << "8. Wyloguj sie" << endl;
+            cout << "---------------------------" << endl;
 
             cout << endl << "Twoj wybor: ";
 
@@ -70,8 +72,12 @@ int main() {
             case '1':
                 ksiazkaAdresowa.dodajAdresata();
                 break;
+            case '8':
+                ksiazkaAdresowa.ustawIdZalogowanegoUzytkownika(0);
+                ksiazkaAdresowa.wyloguj();
+                break;
             }
-            return 0;
         }
     }
+    return 0;
 }

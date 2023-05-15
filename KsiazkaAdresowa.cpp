@@ -42,19 +42,19 @@ void KsiazkaAdresowa::dodajAdresata() {
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
 
         adresatMenedzer->dodajAdresata();
+    } else {
+        cout << "Zaden uzytkownik nie jest zalogowany" << endl;
+        system("pause");
     }
-    else cout << "Zaden uzytkownik nie jest zalogowany" << endl;
-    system("pause");
 }
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
 
     adresatMenedzer->wyswietlWszystkichAdresatow();
 }
-/*void KsiazkaAdresowa::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika) {
+void KsiazkaAdresowa::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika) {
     uzytkownikMenedzer.ustawIdZalogowanegoUzytkownika(noweIdZalogowanegoUzytkownika);
-}*/
-int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
-{
+}
+int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika() {
     return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
 }
