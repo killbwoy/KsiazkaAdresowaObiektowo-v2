@@ -43,35 +43,30 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
 }
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
 
-    for(unsigned int i = 0; i < (int)uzytkownicy.size(); i++) {
+    for(int i = 0; i < (int)uzytkownicy.size(); i++) {
 
-            cout <<  uzytkownicy[i].pobierzId() << endl;
-            cout <<  uzytkownicy[i].pobierzLogin() << endl;
-            cout <<  uzytkownicy[i].pobierzHaslo() << endl;
-        }
-        system("pause");
+        cout <<  uzytkownicy[i].pobierzId() << endl;
+        cout <<  uzytkownicy[i].pobierzLogin() << endl;
+        cout <<  uzytkownicy[i].pobierzHaslo() << endl;
+    }
+    system("pause");
 }
-int UzytkownikMenedzer::logowanieUzytkownika()
-{
+int UzytkownikMenedzer::logowanieUzytkownika() {
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
     cout << endl << "Podaj login: ";
     login = MetodyPomocnicze::wczytajLinie();
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
-    while (itr != uzytkownicy.end())
-    {
-        if (itr -> pobierzLogin() == login)
-        {
-            for (int iloscProb = 3; iloscProb > 0; iloscProb--)
-            {
+    while (itr != uzytkownicy.end()) {
+        if (itr -> pobierzLogin() == login) {
+            for (int iloscProb = 3; iloscProb > 0; iloscProb--) {
                 cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
                 haslo = MetodyPomocnicze::wczytajLinie();
 
-                if (itr -> pobierzHaslo() == haslo)
-                {
+                if (itr -> pobierzHaslo() == haslo) {
                     cout << endl << "Zalogowales sie." << endl << endl;
-                    idZalogowanegoUzytkownika = itr->pobierzId();
+                    IdZalogowanegoUzytkownika = itr->pobierzId();
                     system("pause");
                     return IdZalogowanegoUzytkownika;
                 }
@@ -86,24 +81,21 @@ int UzytkownikMenedzer::logowanieUzytkownika()
     system("pause");
     return 0;
 }
-void UzytkownikMenedzer::wyloguj(){
+void UzytkownikMenedzer::wyloguj() {
 
-    idZalogowanegoUzytkownika = 0;
+    IdZalogowanegoUzytkownika = 0;
     cout << "Zostales wylogowany" << endl;
     system("pause");
 }
-void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
-{
+void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
     Uzytkownik uzytkownik;
 
     string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
     noweHaslo = MetodyPomocnicze::wczytajLinie();
 
-    for (int i = 0; i < (int) uzytkownicy.size(); i++)
-    {
-        if (uzytkownicy[i].pobierzId() == idZalogowanegoUzytkownika)
-        {
+    for (int i = 0; i < (int) uzytkownicy.size(); i++) {
+        if (uzytkownicy[i].pobierzId() == IdZalogowanegoUzytkownika) {
             uzytkownicy[i].ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
             system("pause");
@@ -111,8 +103,6 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
-<<<<<<< Updated upstream
-=======
 
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika() {
     return IdZalogowanegoUzytkownika;
@@ -123,4 +113,3 @@ bool UzytkownikMenedzer::czyUzytkownikJestZalogowany() {
     else
         return false;
 }
->>>>>>> Stashed changes

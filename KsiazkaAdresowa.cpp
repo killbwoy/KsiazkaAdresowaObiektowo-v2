@@ -1,12 +1,9 @@
 #include "KsiazkaAdresowa.h"
 
-void KsiazkaAdresowa::rejestracjaUzytkownika(){
+void KsiazkaAdresowa::rejestracjaUzytkownika() {
 
     uzytkownikMenedzer.rejestracjaUzytkownika();
 }
-<<<<<<< Updated upstream
-void KsiazkaAdresowa::wypiszWszystkichUzytkownikow(){
-=======
 
 void KsiazkaAdresowa::logowanieUzytkownika() {
 
@@ -20,34 +17,26 @@ void KsiazkaAdresowa::logowanieUzytkownika() {
 }
 
 void KsiazkaAdresowa::wypiszWszystkichUzytkownikow() {
->>>>>>> Stashed changes
 
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
-void KsiazkaAdresowa::logowanieUzytkownika(){
 
-    uzytkownikMenedzer.logowanieUzytkownika();
-}
-void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika(){
+void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika() {
 
-    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+        uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+    }
 }
-void KsiazkaAdresowa::wyloguj(){
+
+void KsiazkaAdresowa::wyloguj() {
 
     uzytkownikMenedzer.wyloguj();
-<<<<<<< Updated upstream
-=======
     //adresatMenedzer.ustawIdZalogowanegoUzytkownika(0);
     //adresatMenedzer.wyloguj();
     delete adresatMenedzer;
     adresatMenedzer = NULL;
->>>>>>> Stashed changes
 }
-void KsiazkaAdresowa::dodajAdresata(){
 
-<<<<<<< Updated upstream
-    adresatMenedzer->dodajAdresata();
-=======
 void KsiazkaAdresowa::dodajAdresata() {
 
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
@@ -56,13 +45,8 @@ void KsiazkaAdresowa::dodajAdresata() {
     }
     else cout << "Zaden uzytkownik nie jest zalogowany" << endl;
     system("pause");
->>>>>>> Stashed changes
 }
-void KsiazkaAdresowa::wyswietlWszystkichAdresatow(){
 
-<<<<<<< Updated upstream
-    adresatMenedzer->wyswietlWszystkichAdresatow();
-=======
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
 
     adresatMenedzer->wyswietlWszystkichAdresatow();
@@ -73,5 +57,4 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow() {
 int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
 {
     return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
->>>>>>> Stashed changes
 }

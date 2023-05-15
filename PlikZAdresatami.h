@@ -9,32 +9,30 @@
 
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
+#include "UzytkownikMenedzer.h"
 
 using namespace std;
 
-class PlikZAdresatami{
+class PlikZAdresatami {
+
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
 
     int idOstatniegoAdresata;
-    const string NAZWA_PLIKU_Z_ADRESATAMI;;
-    string pobierzLiczbe(string tekst, int pozycjaZnaku);
-    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
 
 public:
 
-<<<<<<< Updated upstream
-    PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami){
-=======
     PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {
->>>>>>> Stashed changes
         idOstatniegoAdresata = 0;
     };
+
     bool dopiszAdresataDoPliku(Adresat adresat);
-    vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int ID_Zalogowanego_Uzytkownika);
+    vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int IdZalogowanegoUzytkownika);
     int pobierzIdOstatniegoAdresata();
-    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-
-
+    string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
+    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+    void ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata);
 };
 #endif

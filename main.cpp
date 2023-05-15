@@ -24,22 +24,7 @@ int main() {
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    //ksiazkaAdresowa.logowanieUzytkownika();
-    //ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-    //ksiazkaAdresowa.wyloguj();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-
-=======
-    ksiazkaAdresowa.rejestracjaUzytkownika();
-    ksiazkaAdresowa.rejestracjaUzytkownika();
->>>>>>> Stashed changes
-=======
     char wybor;
->>>>>>> Stashed changes
 
     while (true) {
         if (ksiazkaAdresowa.pobierzIdZalogowanegoUzytkownika() == 0) {
@@ -53,11 +38,6 @@ int main() {
             cout << "---------------------------" << endl;
             cout << "Twoj wybor: ";
 
-<<<<<<< Updated upstream
-    ksiazkaAdresowa.logowanieUzytkownika();
-    ksiazkaAdresowa.dodajAdresata();
-    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-=======
             wybor = wczytajZnak();
 
             switch (wybor) {
@@ -81,7 +61,6 @@ int main() {
             cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
             cout << "---------------------------" << endl;
             cout << "1. Dodaj adresata" << endl;
->>>>>>> Stashed changes
 
             cout << endl << "Twoj wybor: ";
 
