@@ -67,9 +67,7 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat) {
 int AdresatMenedzer::pobierzIdOstatniegoAdresata() {
     return plikZAdresatami.pobierzIdOstatniegoAdresata();
 }
-void AdresatMenedzer::wyloguj() {
-    adresaci.clear();
-}
+
 void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku() {
     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 }
