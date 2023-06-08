@@ -35,7 +35,11 @@ public:
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     void wypiszWszystkichUzytkownikow();
+    void edytujAdresata();
     void ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika);
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    void usunAdresata();
 
 };
 

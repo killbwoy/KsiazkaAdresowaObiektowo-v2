@@ -16,10 +16,14 @@ using namespace std;
 class PlikZAdresatami {
 
     const string NAZWA_PLIKU_Z_ADRESATAMI;
+    string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_tymczasowo.txt";
 
     int idOstatniegoAdresata;
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    void zmienNazwePliku(string staraNazwa, string nowaNazwa);
+    void usunPlik(string nazwaPlikuZRozszerzeniem);
+    void edytujWybranaLinieWPliku(string liniaZDanymiAdresataOddzielonePionowymiKreskami, int idAdresata);
 
 public:
 
@@ -34,5 +38,8 @@ public:
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     void ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata);
+    void usunAdresataZPliku(int idUsuwanegoAdresata);
+    string pobierzNazwePliku();
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
 };
 #endif
