@@ -1,9 +1,6 @@
 #ifndef KSIAZKAADRESOWA_H
 #define KSIAZKAADRESOWA_H
 
-#include <iostream>
-#include <string>
-
 #include "UzytkownikMenedzer.h"
 #include "AdresatMenedzer.h"
 

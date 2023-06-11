@@ -30,16 +30,16 @@ public:
     };
 
     int pobierzIdZalogowanegoUzytkownika();
+    int pobierzIdOstatniegoAdresata();
+    int podajIdWybranegoAdresata();
 
     void dodajAdresata();
-    void wyswietlWszystkichAdresatow();
     void wyloguj();
-    int pobierzIdOstatniegoAdresata();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void edytujAdresata();
     void usunAdresata();
-    int podajIdWybranegoAdresata();
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif

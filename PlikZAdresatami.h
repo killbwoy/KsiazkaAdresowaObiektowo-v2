@@ -1,21 +1,15 @@
 #ifndef PLIKZADRESATAMI_H
 #define PLIKZADRESATAMI_H
 
-#include <iostream>
-#include <vector>
-#include <fstream>
-#include <cstdlib>
-#include <string>
-
+#include "PlikTekstowy.h"
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
 #include "UzytkownikMenedzer.h"
 
 using namespace std;
 
-class PlikZAdresatami {
+class PlikZAdresatami :public PlikTekstowy{
 
-    const string NAZWA_PLIKU_Z_ADRESATAMI;
     string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_tymczasowo.txt";
 
     int idOstatniegoAdresata;
@@ -27,9 +21,7 @@ class PlikZAdresatami {
 
 public:
 
-    PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {
-        idOstatniegoAdresata = 0;
-    };
+    PlikZAdresatami(string nazwaPliku) : PlikTekstowy(nazwaPliku) {};
 
     bool dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int IdZalogowanegoUzytkownika);
