@@ -10,13 +10,14 @@ void AdresatMenedzer::dodajAdresata() {
 
     adresaci.push_back(adresat);
     if(plikZAdresatami.dopiszAdresataDoPliku(adresat)) {
-        cout << "Nowy adresat zostal dodany" << endl;
+        cout << endl << "Nowy adresat zostal dodany" << endl << endl;
         system("pause");
     } else {
         cout << "Blad. Nie udalo sie dodac nowego adresata do pliku" << endl;
         system("pause");
     }
 }
+
 Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
 
     Adresat adresat;
@@ -41,6 +42,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
 
     return adresat;
 }
+
 void AdresatMenedzer::wyswietlWszystkichAdresatow() {
 
     system("cls");
@@ -56,6 +58,7 @@ void AdresatMenedzer::wyswietlWszystkichAdresatow() {
     }
     system("pause");
 }
+
 void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat) {
     cout << endl << "Id:                 " << adresat.pobierzId() << endl;
     cout << "Imie:               " << adresat.pobierzImie() << endl;
@@ -67,10 +70,6 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat) {
 
 int AdresatMenedzer::pobierzIdOstatniegoAdresata() {
     return plikZAdresatami.pobierzIdOstatniegoAdresata();
-}
-
-void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku() {
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 }
 
 void AdresatMenedzer::wyszukajAdresatowPoImieniu() {

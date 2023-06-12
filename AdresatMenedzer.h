@@ -20,7 +20,6 @@ class AdresatMenedzer {
     Adresat podajDaneNowegoAdresata();
     vector <Adresat> adresaci;
     void wyswietlDaneAdresata(Adresat adresat);
-    void wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 public:

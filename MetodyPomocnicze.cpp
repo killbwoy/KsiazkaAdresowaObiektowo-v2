@@ -9,12 +9,14 @@ string MetodyPomocnicze::konwersjaIntNaString(int liczba)
     string str = ss.str();
     return str;
 }
+
 string MetodyPomocnicze::wczytajLinie()
 {
     string wejscie = "";
     getline(cin, wejscie);
     return wejscie;
 }
+
 string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst)
 {
     if (!tekst.empty())
@@ -24,6 +26,7 @@ string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst
     }
     return tekst;
 }
+
 bool MetodyPomocnicze::czyPlikJestPusty(fstream &plikTekstowy)
 {
     plikTekstowy.seekg(0, ios::end);
@@ -32,6 +35,7 @@ bool MetodyPomocnicze::czyPlikJestPusty(fstream &plikTekstowy)
     else
         return false;
 }
+
 int MetodyPomocnicze::konwersjaStringNaInt(string liczba)
 {
     int liczbaInt;
@@ -40,6 +44,7 @@ int MetodyPomocnicze::konwersjaStringNaInt(string liczba)
 
     return liczbaInt;
 }
+
 char MetodyPomocnicze::wczytajZnak() {
     string wejscie = "";
     char znak  = {0};

@@ -38,8 +38,10 @@ public:
     void wypiszWszystkichUzytkownikow();
     void zmianaHaslaZalogowanegoUzytkownika();
     void ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika);
+    void wyloguj();
     int logowanieUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
-    void wyloguj();
+
 };
+
 #endif

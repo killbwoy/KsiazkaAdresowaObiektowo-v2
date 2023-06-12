@@ -19,4 +19,5 @@ public:
     static char wczytajZnak();
     static int wczytajLiczbeCalkowita();
 };
+
 #endif

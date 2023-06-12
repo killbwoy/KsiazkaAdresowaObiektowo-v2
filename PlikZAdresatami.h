@@ -31,7 +31,7 @@ public:
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     void ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata);
     void usunAdresataZPliku(int idUsuwanegoAdresata);
-    string pobierzNazwePliku();
     void zaktualizujDaneWybranegoAdresata(Adresat adresat);
 };
+
 #endif

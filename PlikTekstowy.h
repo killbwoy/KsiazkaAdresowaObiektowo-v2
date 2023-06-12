@@ -15,4 +15,4 @@ public:
     bool czyPlikJestPusty(fstream &plikTekstowy);
 };
 
-#endif // PLIKTEKSTOWY_H
+#endif

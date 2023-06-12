@@ -11,6 +11,7 @@ void UzytkownikMenedzer::rejestracjaUzytkownika() {
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
 }
+
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
 
     Uzytkownik uzytkownik;
@@ -26,12 +27,14 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
 
     return uzytkownik;
 }
+
 int UzytkownikMenedzer::pobierzIdNowegoUzytkownika() {
     if (uzytkownicy.empty() == true)
         return 1;
     else
         return uzytkownicy.back().pobierzId() + 1;
 }
+
 bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
     for(unsigned int i = 0; i < uzytkownicy.size(); i++) {
         if(uzytkownicy[i].pobierzLogin() == login) {
@@ -41,6 +44,7 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
     }
     return false;
 }
+
 void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
 
     for(int i = 0; i < (int)uzytkownicy.size(); i++) {
@@ -51,6 +55,7 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
     }
     system("pause");
 }
+
 int UzytkownikMenedzer::logowanieUzytkownika() {
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
@@ -81,12 +86,14 @@ int UzytkownikMenedzer::logowanieUzytkownika() {
     system("pause");
     return 0;
 }
+
 void UzytkownikMenedzer::wyloguj() {
 
     IdZalogowanegoUzytkownika = 0;
-    cout << "Zostales wylogowany" << endl;
+    cout << endl << "Zostales wylogowany" << endl << endl;
     system("pause");
 }
+
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
     Uzytkownik uzytkownik;
 
@@ -107,12 +114,14 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika() {
     return IdZalogowanegoUzytkownika;
 }
+
 bool UzytkownikMenedzer::czyUzytkownikJestZalogowany() {
     if (IdZalogowanegoUzytkownika > 0)
         return true;
     else
         return false;
 }
+
 void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
 {
     IdZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
